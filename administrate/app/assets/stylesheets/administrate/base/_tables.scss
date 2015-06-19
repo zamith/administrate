@@ -1,19 +1,17 @@
 table {
-  border: $base-border;
   border-collapse: separate;
   border-radius: $base-border-radius;
-  margin: ($base-spacing / 2) 0;
   table-layout: fixed;
   width: 100%;
 }
 
 thead {
-  background-color: $grey-0;
+  background-color: $hover-link-color;
+  color: $grey-0;
 }
 
 th {
   border-bottom: $dark-border;
-  color: $grey-4;
   font-size: $small-font-size;
   font-weight: $normal-font-weight;
   letter-spacing: 0.0357em;
@@ -60,11 +58,25 @@ tr {
 }
 
 
+
 td,
 th {
+  padding-top: $base-spacing;
+  padding-bottom: $base-spacing;
+  padding-left: $base-spacing/2;
+
   &:first-child {
-    padding-left: 1em;
+    padding-left: $base-spacing;
   }
+
+  &:last-child {
+    padding-right: $base-spacing;
+  }
+}
+
+th {
+  padding-top: $base-spacing/2;
+  padding-bottom: $base-spacing/2;
 }
 
 tr,
