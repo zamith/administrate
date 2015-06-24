@@ -1,11 +1,13 @@
 .table-row {
   background-color: $white;
-  border-left: 2px solid transparent;
   transition: $base-transition;
 
   &:hover {
-    background-color: $grey-0;
-    border-left-color: $blue;
+    background-color: inherit;
     cursor: pointer;
   }
+}
+
+.content-show table {
+  @include card(1);
 }

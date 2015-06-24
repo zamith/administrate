@@ -36,7 +36,6 @@ class CustomerDashboard < Administrate::BaseDashboard
       :lifetime_value,
       :orders,
       :created_at,
-      :updated_at,
     ]
   end
 end

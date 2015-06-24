@@ -32,11 +32,6 @@ class OrderDashboard < Administrate::BaseDashboard
   def attributes
     [
       :id,
-      :address_line_one,
-      :address_line_two,
-      :address_city,
-      :address_state,
-      :address_zip,
       :customer,
       :line_items,
       :total_price,

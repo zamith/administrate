@@ -3,9 +3,11 @@
   <%= link_to 'Edit', [:edit, Administrate::NAMESPACE, @page.resource], class: "button" %>
 </header>
 
+<div class="content-show">
 <dl>
   <% @page.attributes.each do |attribute| %>
     <dt><%= attribute.name.titleize %></dt>
     <dd><%= render_field attribute %></dd>
   <% end %>
 </dl>
+</div>

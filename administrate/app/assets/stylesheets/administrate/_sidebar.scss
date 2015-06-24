@@ -17,20 +17,26 @@
     }
 
     &-heading {
-      color: $grey-0;
+      color: inherit;
       font-size: 1.6em;
     }
   }
 
   &-list {
     @include fill-parent;
+
+    &:hover {
+      a.active:not(:hover) {
+        box-shadow: none;
+        background-color: inherit;
+        color: inherit;
+      }
+    }
   }
 
   a {
     @include fill-parent;
-    border-bottom-left-radius: 4px;
-    border-top-left-radius: 4px;
-    color: $grey-0;
+    color: inherit;
     display: block;
     padding: 0.5em 1em;
     transition: background-color 0.05s linear;
@@ -38,11 +44,13 @@
     &.active {
       @include card(1);
       background-color: $sidebar-active-color;
+      color: $grey-0;
     }
 
     &:hover {
       @include card(1);
-      background-color: $sidebar-hover-color;
+      background-color: $sidebar-active-color;
+      color: $grey-0;
     }
   }
 }
