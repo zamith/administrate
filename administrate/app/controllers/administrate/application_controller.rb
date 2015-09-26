@@ -6,6 +6,11 @@ module Administrate
       @resources = order.apply(@resources)
       @resources = @resources.page(params[:page]).per(records_per_page)
       @page = Administrate::Page::Table.new(dashboard, order: order)
+
+      respond_to do |format|
+        format.html
+        format.json { @resources = resource_class.all }
+      end
     end
 
     def show

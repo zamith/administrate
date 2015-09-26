@@ -1,0 +1,10 @@
+{
+  "<%= @page.resource_name.pluralize %>": [
+    <% @resources.each do |resource| %>
+      {
+        "id": "<%= resource.id %>",
+        "to_s": "<%= resource.to_s %>"
+      },
+    <% end %>
+  ]
+}
