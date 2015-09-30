@@ -68,6 +68,15 @@ describe Administrate::Field::HasMany do
 
         expect(field.resources).to eq([:a])
       end
+
+      it "works with arrays" do
+        resources = [1, 2, 3]
+
+        association = Administrate::Field::HasMany.with_options(limit: 2)
+        field = association.new(:customers, resources, :show)
+
+        expect(field.resources).to eq([1, 2])
+      end
     end
   end
 end
