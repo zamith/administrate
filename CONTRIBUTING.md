@@ -32,19 +32,24 @@ merge the contribution.
 
 ## Performance Improvements
 
-If you are submitting a performance improvement,
+Improving our users' experience should be the primary goal of any optimization.
+
+If you contribute a performance improvement,
 you must submit performance profiles
 that show that your optimizations
 make a significant impact
-on overall request times.
+on Administrate's request times.
 
-
-We aren't willing to sacrifice code readability to improve performance,
-unless we can show that there is a significant improvement
-on the level of entire requests.
 Request-level profiles are our best measure
-of how users will experience our app.
-Improving our users' experience should be the primary goal of any optimization.
+of how users experience our app.
+Many other performance measurements,
+such as benchmarks,
+can give inaccurate impressions
+of an optimization's overall impact.
+
+Tools like [Rack MiniProfiler] are helpful
+for generating request-level performance profiles.
 
 [code of conduct]: https://thoughtbot.com/open-source-code-of-conduct
 [commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+[Rack MiniProfiler]: https://github.com/MiniProfiler/rack-mini-profiler
