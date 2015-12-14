@@ -6,7 +6,6 @@ describe Administrate::Generators::AssetsGenerator, :generator do
   describe "administrate:assets" do
     it "runs all sub-generators" do
       allow(Rails::Generators).to receive(:invoke)
-      resource = "users"
 
       run_generator []
 
